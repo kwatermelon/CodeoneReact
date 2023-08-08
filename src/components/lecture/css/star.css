@@ -1,0 +1,33 @@
+/* 
+.rating svg{
+	color:#ebebeb;
+}
+
+.rating svg.selected {
+    color: #f05522;
+  } */
+
+  .star-rating .rating .selected {
+    color: #faf61aef;
+  }
+
+  .rating {
+    display: inline-block;
+    position: relative;
+    height: 25px;
+    line-height: 25px;
+    vertical-align: top;
+}
+
+
+/* star체크 */
+.rating .fa-star {
+    font-size: 1.5em;
+    color: #ebebeb;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.rating .selected {
+    color: #FFC107;
+}

@@ -1,0 +1,62 @@
+import { useEffect } from "react";
+
+export default function KakaoShare(props) {
+    useEffect(() => {
+        kakaoButton();
+        // console.log(window.location.href);
+    }, []);
+
+    const kakaoButton = () => {
+        if (window.Kakao) {
+            const kakao = window.Kakao;
+
+            if (!kakao.isInitialized()) {
+                //Already initialized 에러를 방지하기: 초기화되지 않은 상황에만 호출되도록 하기
+                kakao.init("e79b288ebffab6c35ea1c3d7624e2f3a");
+            }
+
+            kakao.Share.createDefaultButton({
+                container: "#kakaotalk-sharing-btn",
+                objectType: "feed",
+                content: {
+                    title: "오늘의 디저트",
+                    description: "아메리카노, 빵, 케익",
+                    imageUrl:
+                        "https://mud-kage.kakao.com/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg",
+                    link: {
+                        mobileWebUrl: "https://www.naver.com/",
+                        webUrl: "https://www.naver.com/",
+                    },
+                },
+                itemContent: {
+                    profileText: "Kakao",
+                    profileImageUrl:
+                        "https://mud-kage.kakao.com/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png",
+                    titleImageUrl:
+                        "https://mud-kage.kakao.com/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png",
+                    titleImageText: "Cheese cake",
+                    titleImageCategory: "Cake",
+                   
+                    sum: "Total",
+                    sumOp: "15000원",
+                },
+                social: {
+                    likeCount: 10,
+                    commentCount: 20,
+                    sharedCount: 30,
+                },
+                buttons: [
+                    {
+                        title: "웹으로 보기",
+                        link: {
+                            mobileWebUrl: window.location.href,
+                            webUrl: window.location.href,
+                        },
+                    },
+                ],
+            });
+        }
+    };
+
+    return <button id="kakaotalk-sharing-btn">KakaoShare</button>;
+}

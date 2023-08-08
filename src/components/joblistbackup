@@ -1,0 +1,294 @@
+import './css/joblist.css';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import './css/default.css';
+import Select from 'react-select';
+import heart from '../../assets/job/heart.png';
+// import fullheart from '../../assets/job/fullheart.png';
+
+
+function JobList(){
+    const [joblist, setJobList] = useState([]);
+    const [comname, setComname] = useState('');     // 회사이름
+
+    const [comcate, setComcate] = useState('');     //직군
+    const [comjobname, setComjobname] = useState('');  //직무
+    const [comcareer, setComcareer] = useState('');  //경력
+    const [comlocation, setComlocation] = useState('');  //지역
+    const [comskill, setComskill] = useState('');      //기술
+    const [comtag, setComtag] = useState('');   //태그
+
+    const [comcatelist, setComcatelist] = useState([]);
+    const [comjobnamelist, setComjobnamelist] = useState([]);
+    const [comcareerlist, setComcareerlist] = useState([]);
+    const [comlocationlist, setComlocationlist] = useState([]);
+    const [comsklist, setComSklist] = useState([]);
+    const [comtaglist, setComtaglist] = useState('');   //태그
+  
+    const [joblike, setJoblike] = useState(''); //좋아요
+    // const [likeImage, setLikeImage] = useState('');
+
+    const comnameHandler = (e) => {
+        e.preventDefault();
+        setComname(e.target.value);
+      }
+      //검색
+      const handleFilter = () => {
+        // alert("comname : " + comname);
+        axios.get('http://localhost:/job/list', {
+          params: {
+            "comname": comname,
+            "comcate": comcate,
+            "comjobname": comjobname,
+            "comcareer": comcareer,
+            "comlocation": comlocation,
+            "comskill": comskill,
+            "comtag": comtag
+          }
+        })
+          .then((response) => {
+            // console.log("정상");
+            console.log(response.data.list.list);
+            setJobList(response.data.list.list);
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+      };
+    
+      //직군
+      const getComCate = () => {
+        axios.get('http://localhost:/job/code/list', {
+          params: {
+            group_seq: 1,
+            parent_code_seq: comcate
+          }
+        })
+          .then((response) => {
+            setComcatelist(response.data.list.list);
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+      }
+
+      //직무
+      const getComjobname = (value) => {
+        setComcate(value);
+        axios.get('http://localhost:/job/code/list', {
+          params: {
+            group_seq: 1,
+            parent_code_seq: value
+          }
+        }).then((response) => {
+          console.log(response);
+          setComjobnamelist(response.data.list.list);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+      }
+
+      //경력
+      const getComCareer = () => {
+        axios.get('http://localhost:/job/code/list', {
+          params: { 
+            group_seq: 2
+          }
+        })
+        .then((response) => {
+          console.log(response);
+          setComcareerlist(response.data.list.list);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+      }
+    
+      //지역
+      const getComLocation = () => {
+        axios.get('http://localhost:80/job/code/list?group_seq=3')
+        .then((response) => {
+          console.log(response);
+          setComlocationlist(response.data.list.list);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+      }
+
+
+      //기술
+      const skillButtonClick = (value) => {
+        setComskill(value);
+      };
+    
+      const getComSkill = () => {
+        axios.get('http://localhost:80/job/code/list?group_seq=4')
+        .then((response) => {
+          console.log(response);
+        //   setComSklist(response.data?.list?.list);
+          setComSklist(response.data.list.list);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+      }
+    
+      //태그
+      const tagButtonClick = (value) => {
+        setComskill(value);
+      };
+    
+      const getComTag = () => {
+        axios.get('http://localhost:80/job/code/list?group_seq=5')
+        .then((response) => {
+          console.log(response);
+          setComtaglist(response.data.list.list);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+      };
+
+      
+      좋아요
+      const jobHandleLike = (seq) => {
+        axios.post('http://localhost:/job/doLike', {
+          seq: seq
+        })
+          .then((response) => {
+            console.log(response.data);
+            setJoblike(response.data?.doLike);
+            setLikeImage("./codeonereact/src/assets/fullheart.png");
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+      };
+
+      const jobHandleUnLike = (seq) => {
+        axios.post('http://localhost:/job/doUnLike', {
+          seq: seq
+        })
+          .then((response) => {
+            console.log(response.data);
+            setJoblike(response.data?.doUnLike);
+            setLikeImage("./codeonereact/src/assets/fullheart.png");
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+      };
+
+ 
+
+      useEffect(()=>{
+        handleFilter();
+        getComCate();
+        getComCareer();
+        getComLocation();
+        getComSkill();
+        getComTag();
+        jobHandleLike();
+      },[]);
+
+
+
+return(
+    <>
+    <div className='tonetenets'>
+          <div className="main_visual">
+           
+              <div className="total-search">
+                <div>
+    <input type="text" placeholder="회사 이름을 입력해주세요" value={comname} onChange={comnameHandler}/>
+    <button onClick={handleFilter} >검색</button>
+     </div> 
+
+     <div className="jobfilter">
+        <Select options={comcatelist} placeholder="직군" onChange={(e) => getComjobname(e.value)}/>
+        <Select options={comjobnamelist} placeholder="직무" onChange={(e) => setComjobname(e.value)}/>
+    </div> 
+
+     <div className="careerlocation">
+        <Select options={comcareerlist} placeholder="경력" onChange={(e) => getComCareer(e.value)}/>
+        
+        <Select options={comlocationlist} placeholder="지역" onChange={(e) => getComLocation(e.value)}/>
+     </div>
+
+         {/* 기술스택*/}
+         <div className="job-skill">
+         {comsklist.length > 0 ? (
+         comsklist.map((item) => (
+            <div className="item">
+                <button onClick={() => tagButtonClick(item.label)}>
+                {item.label}
+                </button>
+            </div>
+            ))
+            ) : (
+            <div>데이터가 존재하지않습니다</div>
+            )}
+          </div>
+
+
+            </div>
+                    
+                  </div>
+                 
+        {/* 슬라이드 태그 */}
+        <div className="slide"> 
+        {comtaglist.length > 0 ? (
+        comtaglist.map((item) => (
+            <div className="item">
+                <button onClick={() => skillButtonClick(item.label)}>
+                {item.label}
+                </button>
+            </div>
+            ))
+            ) : (
+            <div>데이터가 존재하지않습니다</div>
+            )}
+            </div>
+
+           
+
+        <div className="card-list">
+            {joblist.length > 0 ? (
+                    joblist.map((item) => (
+                      <div className="item">
+                         <a href={`/jobdetail/${item.seq}`}>
+                          <div className="img">
+                            <img src={item.comimage} alt="이미지"/>
+                          </div>
+                        </a>
+                          <div className="txt">
+                              {item.comname}<br/>
+                              {item.comjobname}<br/>
+                              {item.comskill}<br/>
+                              {item.comcareer}
+                           </div>
+                          {/* 좋아요 */}
+                           <div>
+                          {/* <img src={likeImage} alt="" style={{ width: "15px", height: "15px" }} 
+                           onClick={() => jobHandleLike(item.seq)} /> */}
+                           </div> 
+
+                        </div>
+                        ))
+                      ) : (
+                        <div>데이터가 존재하지않습니다</div>
+                        )}
+                
+            </div>
+        </div>
+   </>
+  );
+}
+              
+
+export default JobList;
+
+  
+

@@ -1,0 +1,27 @@
+
+.lectureregiAf-page{
+    text-align: center;
+    width: 1760px;
+}
+
+.lectureregiAf-page img{
+    width: 800px;    
+}
+
+.lectureregiAf-page h3{
+    font-weight: bold;
+    font-size: 40px;
+    margin: 30px;
+    
+}
+
+.lectureregiAf-page p{
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.lectureregiAf-page button{
+    width: 300px;
+    font-size: 20px;
+    margin-bottom: 30px;
+}

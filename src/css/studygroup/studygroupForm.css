@@ -1,0 +1,80 @@
+#studygroupWrite {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 사용자 입력 화면 */
+#startDateLabel {
+    display: block;
+}
+
+#startDate {
+    width: 45%;
+    display: inline-block;
+    margin-right: 13px;
+}
+
+#endDate {
+    width: 45%;
+    display: inline-block;
+    margin-left: 13px;
+}
+
+#position, #technologyStack {
+    background: white;
+}
+
+#isVisibleLabel {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+#contentWrapper {
+    height: 654px;
+}
+
+#contentWrapper > div > div.ql-container.ql-snow > div.ql-editor {
+    font-size: 24px;
+    background: white;
+}
+
+.ql-snow .ql-editor h2 {
+    text-align: unset;
+}
+
+.ql-container.ql-snow {
+    height: 600px;
+}
+
+#btnWrapper > button {
+    font-size: 24px;
+    width: 120px;
+}
+
+#btnWrapper > button:first-child {
+    margin-right: 10px;
+}
+
+/* 미리 보기 화면 */
+.alert {
+    text-align: center;
+}
+
+.info.row {
+    margin-top: 0px!important;
+}
+
+/* 경고 문구 */
+#titleProfileWrapper, #lastInfo, #content {
+    border-bottom: 2px solid rgb(207, 207, 207);
+    padding-bottom: 30px;
+}
+
+.alert.alert-danger {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.dislayNone {
+    display: none;
+}

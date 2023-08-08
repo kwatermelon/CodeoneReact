@@ -1,0 +1,54 @@
+.listEmpty {
+    text-align: center;
+}
+
+.listEmpty > h1 {
+    font-size: 40px;
+}
+
+.listEmpty > h2 {
+    font-size: 30px !important;
+    padding-bottom: 0px !important;
+}
+
+.listEmpty > * {
+    margin: 30px 0px;
+
+}
+
+.listWrapper > table {
+    text-align: center;
+}
+
+.listWrapper > table > tbody > tr > td:nth-child(1) {
+    width: 80px;
+}
+
+.listWrapper > table > tbody > tr > td:nth-child(2) {
+    width: 620px;
+}
+
+.listWrapper > table > tbody > tr > td:nth-child(3) {
+    width: 160px;
+}
+
+.listWrapper > table > tbody > tr > td:nth-child(4) {
+    width: 310px;
+}
+
+.listWrapper > table > tbody > tr > td:nth-child(5) {
+    width: 160px;
+}
+
+.listWrapper > table > tbody > tr > td:nth-child(5) > img {
+    width: 45px;
+    vertical-align: middle;
+}
+
+.listWrapper > table > tbody > tr > td:nth-child(6) {
+    width: 140px;
+}
+
+.listWrapper > table > tbody > tr > td:nth-child(6) > button:first-child {
+    margin-right: 5px;
+}

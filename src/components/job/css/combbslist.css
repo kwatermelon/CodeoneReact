@@ -1,0 +1,113 @@
+/* 검색 */
+.job-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.job-search input[type="text"] {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 0 1px #ddd;
+    outline: none;
+    width: 300px;
+}
+
+.job-search button[type="submit"] {
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: #191a1b83;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.job-search button[type="submit"]:hover {
+    /* 호버 시 스타일 변경 */
+    background-color: #70777074;
+}
+
+.jobcom-list {
+    width: 80%;
+    height: 650px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.job-header {
+    background-color: #007bff71;
+    color: #ffffff;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.joblist-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.joblist-table th,
+.joblist-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #dddddd;
+    font-size: 15px;
+}
+
+.joblist-table td a:hover {
+    color: #31b4eced;
+    text-decoration: underline;
+}
+
+.joblist-table th:first-child,
+.joblist-table td:first-child {
+    width: 10%;
+}
+
+.joblist-table th:nth-child(2),
+.joblist-table td:nth-child(2) {
+    width: 40%;
+}
+
+.joblist-table th:nth-child(3),
+.joblist-table td:nth-child(3) {
+    width: 30%;
+}
+
+.joblist-table th:nth-child(4),
+.joblist-table td:nth-child(4) {
+    width: 20%;
+}
+
+.job-write {
+    /* 버튼 배경색 및 테두리 설정 */
+    background-color: #191a1b83;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    float: right;
+    border-radius: 20px;
+}
+
+.job-write:hover {
+    /* 호버 시 배경색 변경 */
+    background-color: #70777074;
+}

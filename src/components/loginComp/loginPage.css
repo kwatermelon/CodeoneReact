@@ -1,0 +1,51 @@
+.socialLoginImage {
+    width: 3rem;
+    margin-left: 2rem;
+    border-radius: 50%;
+}
+
+
+.mainBoxLeft {
+    float: left;
+    background-color: seashell;
+    border: 1px solid black;
+    height: 500px;
+    width: 250px;
+    text-align: center;
+}
+
+.userImage {
+    width: 10rem;
+    
+}
+
+.userImage::after {
+    position:absolute;
+    left: 0;
+    top: 3px;
+    content: "";
+    width: 1px;
+    height: 15px;
+    background-color: black;
+}
+
+.userInfoName {
+    float: right;
+border: 1px solid;
+height: 10rem;
+width: 42rem;
+}
+
+
+.mainBoxRight {
+    float: right;
+    border: 1px solid black;
+    height: 500px;
+    width: 850px;
+    margin-right: 5rem;
+}
+
+.loginLogo {
+    width: 6rem;
+    margin-top: 6rem;
+}

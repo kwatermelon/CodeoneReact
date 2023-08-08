@@ -1,0 +1,238 @@
+
+.lecture-detail-page{
+    width: 100%;
+    background-color: white;
+    /* margin: 50px; */
+    padding: 50px;
+    font-family: 'Spoqa Han Sans Neo','Apple SD Gothic Neo',Segoe UI,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+}
+
+.lecture-detail{
+    width: 100%;  
+    margin: auto;   
+}
+
+.lecture-title{
+    background-color: cornsilk;  
+    color: black;
+    padding: 20px;
+}
+
+.lecture-title div{
+    width: 50%;
+    display: inline-block;
+}
+.lecture-title-img{
+    width: 50%;  
+    height: 100%;    
+    text-align: center;  
+    
+}
+.lecture-title-detail{
+    width: 50%;
+    vertical-align: top;
+}
+
+.lecture-title-detail h2{
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    
+}
+
+.lecture-title-detail h4{
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    
+}
+
+.lecture-title-detail p{
+    color: #4f6df4;
+    
+}
+
+.lecture-content{
+    background-color: white;
+    padding:10px;
+    overflow: auto;
+    white-space: pre-wrap; /* pre tag내에 word wrap */
+    width: 60%;
+    /* text-align: center; */
+    
+    /* height: 800px; */
+}
+
+.lecture-content img{
+    width: 100%;            /* 글상세내용에있는 img사이즈 100%로 조정. 안짤리게 */      
+}
+
+.lecture-content p{
+    font-size: 18px;
+}
+
+.lecture-textbox {
+    width: 50%;
+    text-align: center;
+    vertical-align: top;
+    padding-top: 10px;
+}
+
+.lecture-detail-img {
+    width: 50%;
+    height: 100%;
+    /* padding: 20px; */
+    border-radius: 20px;
+}
+
+.lecture-review-form{
+    width: 50%;
+    text-align: center;
+    margin: auto;
+}
+
+.lecture-review-form div{
+    width: 100%;    
+    
+}
+
+.lecture-review-form textarea{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 30px;
+    text-align: left !important;
+    
+}
+
+/* 리뷰작성 버튼*/
+/* .lecture-review-form button{
+    background-color: blueviolet;
+    color: white;
+    border-radius: 10px;
+    padding: 5px 20px 5px 20px;
+    float: right;
+    font-size: 18px;
+    
+} */
+
+.lecture-review-form button{    
+    border-radius: 10px;
+    padding: 5px 20px 5px 20px;
+    /* float: right; */
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: inline-table;
+    
+}
+
+.lecture-review-form h6{
+    font-size: 18px;
+    color: gray;
+}
+
+.lecture-review-form-text{
+    font-size: 20px;
+    /* color: #4f6df4; */
+    color: tomato;
+    
+}
+
+.review-form-textarea {
+    margin-bottom: 150px;
+}
+
+.delbutton{
+    background-color: gray !important;
+}
+
+.comment-profile{
+    text-align: left;
+    /* display: inline-block; */
+    display: inline-flex;    
+    margin-bottom: 20px;
+}
+
+.comment-profile span{
+    margin-left: 5px;    
+}
+
+.rating{
+    display: inline;
+}
+
+.commentDate{
+    color: darkgray;
+    font-weight: 500;
+    text-align: left;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.lecture-nav{
+    width: 40%;
+}
+
+.lecture-content-2line{
+    width: 100%;
+}
+
+.lectureRegiBtn{
+    /* width: 300px;
+    height: 500px;
+    background-color: antiquewhite;
+    display: inline-block; */
+    flex-grow: 3;
+    width: 250px;
+    /* height: 400px; */
+    position: fixed;
+    top: auto;   
+    bottom: 30%;
+    right: 200px;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.lectureRegiBtn input[type="button"]{
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.lectureRegiBtn h3{
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.lectureRegiBtn p{
+    font-size: 16px;
+}
+
+.lecture-comment h3{
+    margin: 30px;
+    font-size: 28px;
+    font-weight: 500;
+    
+}
+
+.lecture-comment h5{
+    margin: 30px;
+    font-size: 25px;
+}
+
+.lecture-comment svg{
+    width: 25px;
+    height: 25px;
+    
+}
+
+.comment-content{
+    font-size: 18px;
+    display: table-cell;
+}
+
+.star-rating p{
+    font-size: 20px;
+}
+

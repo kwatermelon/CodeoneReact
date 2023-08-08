@@ -1,0 +1,105 @@
+.mypageMain {
+    display: flex;
+    margin-bottom: 50px;
+    height: auto;
+    width: auto;
+}
+
+.mainBoxLeft {
+    height: auto;
+    width: 180px;
+    text-align: left;
+    padding: 10px;
+}
+
+.mainBoxLeft > div {
+    margin-bottom: 10px;
+}
+
+.depthWrapper {
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+.depthList {
+    margin-top: 5px;
+}
+
+.mypageMain a {
+    display: flex;
+    color: black;
+    text-decoration: none;
+}
+
+.userImage {
+    width: 10rem;    
+}
+
+.userInfoName {
+    border: 1px solid;
+    height: 10rem;
+    width: 42rem;
+}
+
+.flex-container {
+    flex-grow: 1;
+    /* padding: 10px; */
+}
+
+.flex-container > div:not(:first-child) {
+    margin-top: 30px;
+}
+
+.pictureAndUser {
+    margin-top: 3rem;
+    display: flex;
+}
+
+
+.tabsdiv {
+    margin-top: 3rem;
+}
+
+
+.picture {
+    flex-direction: column;
+    text-align: center;
+    padding-right: 2rem;
+    border-right: 1px solid black;
+}
+
+.userinfo {
+    margin-left: 1rem;
+}
+
+.mypageEtc{
+    font-weight: bold;   
+    border-bottom: 1px solid black;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.mypageLogoutAndProfile {
+    display: flex;
+    font-weight: bold;   
+    border-bottom: 1px solid black;
+    margin-bottom: 2rem;
+}
+
+.logoutButton {
+    margin: 0 auto;
+
+}
+
+/* .content .nav-tabs {
+    background: #dd5b5b;
+    padding: 15px 0 0 0;
+  }
+.content .nav-tabs > li > a {
+    padding: 5px 40px;
+    background: #eaedf2;
+    border: 1px solid #a48686;
+    border-bottom: none;
+    border-top-right-radius: 2em;
+    border-top-left-radius: 1.5em;
+  } */

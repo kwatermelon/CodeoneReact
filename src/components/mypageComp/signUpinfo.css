@@ -1,0 +1,117 @@
+.signup-container {
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.signupMain {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.mainLeft {
+    text-align: left;
+    padding: 10px;
+    height: 200px;
+}
+
+.mainLeft > div {
+    margin-bottom: 10px;
+}
+
+.useSignImage {
+    width: 8rem;
+}
+
+.mainRight {
+    text-align: left;
+    margin-left: 2rem;
+}
+
+.mainRight label {
+    font-weight: bold;
+}
+
+.mainRight input[type="text"] {
+    width: 500px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.mainRight input[type="text"]:focus {
+    outline: none;
+    border-color: #4285f4;
+}
+
+.mainRight span {
+    color: #ff0000;
+    font-size: 12px;
+}
+
+.signup-buttons {
+    margin-top: 20px;
+}
+
+.sign-cancelBtn,
+.sign-sucBtn {
+    padding: 5px 14px; /* 패딩 값을 조정하여 버튼 크기 조절 */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.sign-cancelBtn {
+    background-color: #ccc;
+    color: #000;
+    margin-right: 10px;
+}
+
+.sign-sucBtn {
+    background-color: #4285f4;
+    color: #fff;
+}
+
+/* Additional styles for better appearance */
+.signup-container h2 {
+    color: #4285f4;
+}
+
+.signup-container p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* 이미지 수정, 제거버튼 */
+.signImageUp,
+.signImageDel {
+    padding: 4px 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s;
+    font-size: 17px;
+    margin-left: 12px;
+}
+
+.signImageUp {
+    background-color: #4285f4;
+    margin-top: 10px;
+}
+
+.signImageDel {
+    background-color: #ccc;
+    margin-top: 5px;
+}
+
+.signImageUp:hover,
+.signImageDel:hover {
+    background-color: #2a75e6;
+}

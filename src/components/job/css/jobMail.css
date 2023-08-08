@@ -1,0 +1,127 @@
+#form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+#regiform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid #33333322;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+/* 제목 설정(입사지원서) */
+p[name="regi"] {
+    font-size: 28px;
+    color: #0707f3d9;
+}
+
+/* 부제목 설정 */
+p[name="info"],
+p[name="intro"],
+p[name="comMail"] {
+    color: rgb(90, 88, 88);
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* regitable 위치 조정 */
+table[name="regitable"] {
+    margin-left: 200px;
+}
+
+/* regitable의 th  조정 */
+table[name="regitable"] th {
+    font-size: 16px;
+    color: rgb(90, 88, 88);
+  }
+
+input[name="comname"],
+input[name="comjobname"],
+input[name="name"],
+input[name="comcareer"],
+input[name="phone"],
+input[name="email"],
+input[name="companyMail"],
+input[name="blog"] {
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    max-width: 800px;
+    width: 100%;
+}
+
+button[name="subbutton"] {
+    background-color: #1206f8f3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+button[name="subbutton"]:hover {
+    background-color: #3e618e4d;
+}
+
+table[name="introtable"] {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-align: left;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* regitable의 th  조정 */
+table[name="introtable"] th {
+    font-size: 16px;
+    color: rgb(90, 88, 88);
+  }
+
+/* 입력란 스타일 */
+table[name="introtable"] textarea,
+table[name="introtable"] input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    resize: vertical;
+    border-radius: 10px;
+}
+
+table[name="introtable"] textarea {
+    width: 100%;
+    height: 200px; /* 원하는 높이로 조정하세요. */
+  }
+
+/* placeholer 색 조정 */
+table[name="introtable"] input[type="text"]::placeholder {
+    color: #e11010;
+}
+
+table[name="introtable"] textarea:focus,
+table[name="introtable"] input[type="text"]:focus {
+    border-color: #0078ff;
+    box-shadow: 0px 0px 5px rgba(0, 120, 255, 0.5);
+}

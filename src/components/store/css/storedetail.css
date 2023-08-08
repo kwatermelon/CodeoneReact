@@ -1,0 +1,283 @@
+.store-detail-page{  
+  width: 100%;
+  /* background-color: white; */
+  padding: 50px;
+}
+
+.store-detail{
+  width: 80%;  
+    margin: auto; 
+}
+
+.store-detail-first {  
+  width: 100%;
+  height: 400px;
+  display: flex;
+  
+}
+
+.profile{
+  width: 40px;
+  height: 40px;
+  
+}
+
+.profile-review{
+  width: 60px;
+  height: 60px;
+  
+}
+
+
+.store-comment input[type="text"]{	
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	
+}
+
+.store-comment-update{
+	margin-top: 10px;
+	display: flex;
+	
+}
+.store-comment h3{
+	text-align: left;
+	border-top: 1px solid #ddd;
+	padding-top: 30px;
+	font-weight: 500;
+}
+
+.store-comment-update-btn{
+	margin-top: 10px;
+	float: right;
+}
+
+.store-comment-button{
+	text-align: right !important;
+	margin-top: 10px;
+	
+}
+
+.comment-id{
+  font-weight: 500;
+  font-size: 22px;
+  display: inline-block !important;
+  
+}
+
+.comment-date{
+  font-size: 17px;
+  color: gray;
+  display: inline-flex;
+  padding-top: 5px;
+}
+
+.comment-content{
+  font-size: 18px;
+  margin-left: 75px;
+  
+}
+
+.update-padding{
+	padding-bottom: 20px;
+}
+
+
+/* 
+.store-detail-first {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  text-align: left;  
+} */
+/* 
+.store-detail-sec div {  
+	width: 50%;
+	
+  }  */
+
+
+.thumnail{
+    width: 50%;  
+    height: 100%;    
+    /* text-align: center;  */
+    display: inline-block;
+    
+}
+
+.thumnail img{
+	width: 80%;
+	border-radius: 20px;
+	padding: 10px;
+}
+
+.detail{  
+    width: 50%;
+    height: 100%;   
+    /* display: inline-block; */
+    padding-left: 50px;
+}
+
+.store-detail-first h2{
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  
+}
+
+.store-detail-first h4{
+  font-size: 18px;
+  
+}
+
+.detail p, span{
+  font-size: 20px !important;
+  text-align: left;
+}
+
+.store-detail-sec {
+	width: 100%;
+    /* max-width: 1280px; */
+    margin: 0px auto;
+    /* padding: 60px 40px; */
+	padding: 10px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.store-detail-sec-content{
+  	/* background-color: white;
+    padding:10px;
+    overflow: auto;
+    white-space: pre-wrap; /* pre tag내에 word wrap 
+    width: 60%;
+    display: inline-block; */
+	width: 60%;
+	margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: inherit;
+    font-size: inherit;
+    vertical-align: baseline;
+	margin-top: 50px;
+	
+	/* padding-left: 10px; */
+	
+}
+
+.store-detail-sec-content img{
+    width: 100%;            /* 글상세내용에있는 img사이즈 100%로 조정. 안짤리게 */      
+}
+
+.store-detail-sec-content p{
+    font-size: 18px;
+}
+/* 
+.store-detail-sec div{
+	flex: 1 1 0%;    
+    /* margin-left: 36px; */
+    /* padding-left: 36px; 
+	width: 100%;
+	
+} */
+
+.store-map{  
+  	width: 40%;	
+	vertical-align: baseline;
+
+	margin-left: 36px;
+	padding-left: 36px;
+	border-left: 1px solid rgb(224, 224, 224);
+	margin-top: 50px;
+	
+}
+
+.store-map div{
+	
+}
+
+.store-comment{
+	width: 60%;
+	margin: 0 auto;
+	margin-top: 100px;
+}
+
+.store-comment div{
+	/* font-size: 18px; */
+
+}
+.store-comment-button{
+	text-align: right;
+}
+
+.store-comment-content{
+	
+}
+
+
+.store-detail-udl{
+  text-align: center;
+}
+
+.quill-container {
+    max-width: 1000px;      
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    
+  }
+  
+  .quill-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .comment-container{
+    width: 1300px;     
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* text-align: center; */
+    display: contents;
+    /* text-align: center;
+    margin: auto; */   
+    
+      
+  }
+
+  .store-info-box{
+    width: 400px;
+    height: 300px;
+  }
+
+  .inline-block {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px;    
+  }
+
+  .comment-input{
+    width: 50%;
+  }
+
+  .center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .writter-check-btn{
+    border-radius: 50px !important;    
+    width: 60px;
+    height: 30px;
+    font-size: 15px;
+    margin: 5px;  
+    /* background-color: white; */
+    border: 1px solid tomato ; /* 선 스타일 지정 */
+    color: tomato;
+    
+  }

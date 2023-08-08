@@ -1,0 +1,11 @@
+main .container .row {
+    margin-top: 30px;
+}
+
+i.bi[class*="bi-star"] {
+    font-size: 24px;
+}
+
+.bi-star-fill {
+    color: rgb(249, 168, 37);
+}

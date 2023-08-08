@@ -1,0 +1,52 @@
+/* 페이지에 특정한 스타일 적용 */
+.signup-page {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+}
+
+.signup-page h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.signup-page p {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.signup-page label {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* 버튼 스타일 통일 */
+.signup-page button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    margin-right: 10px;
+    background-color: #007bff;
+}
+
+.signup-page button:last-child {
+    margin-right: 0;
+}
+
+.signup-page input {
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.signup-page span {
+    display: block;
+    margin-top: 6px;
+    color: #ff0000;
+}

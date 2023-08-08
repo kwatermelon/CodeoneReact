@@ -1,0 +1,316 @@
+import React, { useEffect, useState } from "react";
+import { Card, Button } from "react-bootstrap";
+import styled from "styled-components";
+import axios from "axios";
+import imageDefault from "../assets/blog/imageDefault.png";
+import visibility from "../assets/blog/visibility.png";
+
+import favorite from "../assets/blog/favorite.png";
+import BlogCard from "./blog/BlogCard";
+import Chatbox from "./main/Chatbox";
+import "./Main.css";
+
+import { Swiper, SwiperSlide } from "swiper/react"; // basic
+import SwiperCore, { Navigation, Pagination } from "swiper";
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import banner1 from '../assets/main/banner1.jpg';
+import banner2 from '../assets/main/banner2.jpg';
+import banner3 from '../assets/main/banner3.jpg';
+import job1 from '../assets/main/home.png';
+import job2 from '../assets/main/money.png';
+import job3 from '../assets/main/time.png';
+import job4 from '../assets/main/wallet.png';
+
+const TabMenu = styled.ul`
+  background-color: #dcdcdc;
+  color: rgb(232, 234, 237);
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  margin-bottom: 7rem;
+  margin-top: 10px;
+
+  .submenu {
+  // 기본 Tabmenu 에 대한 CSS를 구현
+    display: flex;
+    /* justify-content: space-between;
+    width: 380px;
+    heigth: 30px; */
+    width: calc(100% /3);
+    padding: 10px;
+    font-size: 15px;
+    transition: 0.5s;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .focused {
+   //선택된 Tabmenu 에만 적용되는 CSS를 구현
+    background-color: rgb(255,255,255);
+    color: rgb(21,20,20);
+  }
+
+  & div.desc {
+    text-align: center;
+  }
+`;
+
+const Desc = styled.div`
+  text-align: center;
+`;
+
+const ColoredText = styled.span`
+    color: #e6b74a;
+`;
+
+const SearchResultContainer = styled.div`
+    //   display: flex;
+    width: 100%;
+    height: 3000px;
+    margin: 0 auto;
+    justify-content: center;
+`;
+//채용
+const ChatboxContainer = styled.div`
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    /* 추가적인 스타일 속성은 필요에 따라 추가합니다 */
+`;
+
+const Main = () => {
+    const [blogList, setBlogList] = useState([]);
+
+    // 블로그 가져오기
+    const getAllBlogs = async () => {
+        const res = await axios({
+            method: "get",
+            url: "http://localhost:/blog/getAllBlogs", // => url 맞는거로 바꾸기
+            headers: {
+                "Content-Type": "multipart/form-data",
+            },
+        });
+        setBlogList(res.data);
+    };
+
+    const printRows = (blogList) => {
+        console.log(blogList.length);
+        let roofAmount = parseInt(blogList.length / 5) + 1;
+
+        let components = [];
+
+        for (let i = 0; i < 5; i++) {
+            let component = (
+                <div key={i} className="row">
+                    <Row blogList={blogList} start={i * 5} />
+                </div>
+            );
+
+            components.push(component);
+        }
+
+        return components;
+    };
+
+    const readBlog = (seq) => {
+        window.location.href = `/blogReadForm/${seq}`;
+    };
+
+    const Row = (props) => {
+        let blogList = props.blogList;
+        let start = props.start;
+        let end = start + 5;
+        if (blogList.length < end) {
+            end = blogList.length;
+        }
+
+        let components = [];
+
+        while (start < end) {
+            let blog = blogList[start++];
+            let seq = blog.seq;
+            let title = blog.title;
+            let writer = blog.writer;
+            let thumbnail = imageDefault;
+            if (blog.thumbnail) {
+                thumbnail = blog.thumbnail;
+            }
+            let likes = blog.likes;
+            let replies = blog.replies;
+
+
+            let component = (
+                <BlogCard
+                    key={seq}
+                    seq={seq}
+                    title={title}
+                    thumbnail={thumbnail}
+                    likes={likes}
+                    replies={replies}
+                    writer={writer}
+                ></BlogCard>
+            );
+
+            components.push(component);
+        }
+
+        return components;
+    };
+
+    // chatbot추가 (하나)
+    const [chatboxVisible, setChatboxVisible] = useState(false);
+
+    useEffect(function () {
+        getAllBlogs();
+        // if(inView) {
+        //   console.log(inView, " 무한 스크롤 요청");
+        //   productFetch();
+        // }
+    }, []);
+
+    const [currentTab, clickTab] = useState(0);
+
+    const menuArr = [
+        { name: 'Tab1', content: 'Tab menu ONE' },
+        { name: 'Tab2', content: 'Tab menu TWO' },
+        { name: 'Tab3', content: 'Tab menu THREE' },
+    ];
+
+    const selectMenuHandler = (index) => {
+        // parameter로 현재 선택한 인덱스 값을 전달해야 하며, 이벤트 객체(event)는 쓰지 않는다
+        // 해당 함수가 실행되면 현재 선택된 Tab Menu 가 갱신.
+        clickTab(index);
+    };
+
+    return (
+        <SearchResultContainer>
+            <div className="mainWrap">
+                <div className="slideWrap">
+                <Swiper
+                spaceBetween={50}
+                slidesPerView={1}
+                scrollbar={{ draggable: true }}
+                navigation
+                pagination={{ clickable: true }}
+                loop= {true}
+                //   breakpoints={{
+                //     768: {
+                //       slidesPerView: 7,
+                //     },
+                //   }}
+                >
+                <SwiperSlide><img src={banner1} alt="" /></SwiperSlide>
+                <SwiperSlide><img src={banner2} alt="" /></SwiperSlide>
+                <SwiperSlide><img src={banner3} alt="" /></SwiperSlide>
+                ...
+                </Swiper>
+                </div>
+
+                <div className="blogWrap">
+                    <div className='blog_txt'>
+                        <h3>금주의 Hot Blog 🔥</h3>
+                        <a href="http://localhost:3000/blog">More Blog {'>'}</a>
+                    </div>
+
+                    <div className="blog_list">
+                        {blogList.length > 0 ? (
+                            printRows(blogList)
+                        ) : (
+                            // searchResult의 결과가 0개일때
+                            <>
+                                <h1> 게시물이 없습니다. </h1>                                                                      
+                            </>  
+                        )}
+                    </div>
+                </div>
+
+                <div className="lectureWrap">
+                <div className="lec_txt">
+                    <p>강의샵</p>
+                    <h3>무엇을 더 공부하면<br/>좋을지 고민이신가요?</h3>
+                    <a href="#">더보기 {'>'}</a>
+                </div>
+                <div className="lec_right">
+                    {/* <div className="lec_menu">
+                        <ul>
+                            <li onclick="activateTab('tab1')">백엔드</li>
+                            <li onclick="activateTab('tab2')">프론트엔드</li>
+                            <li onclick="activateTab('tab3')">데이터/머신러닝</li>
+                        </ul>
+                    </div>
+                    <div class="tabContent">
+                        <div id="tab1" class="tabPane active">
+                        <h3>Tab 1 Content</h3>
+                        <p>This is the content for Tab 1.</p>
+                        </div>
+
+                        <div id="tab2" class="tabPane">
+                        <h3>Tab 2 Content</h3>
+                        <p>This is the content for Tab 2.</p>
+                        </div>
+
+                        <div id="tab3" class="tabPane">
+                        <h3>Tab 3 Content</h3>
+                        <p>This is the content for Tab 3.</p>
+                        </div>
+                    </div> */}
+                    <TabMenu>
+                    // 아래 하드코딩된 내용 대신에, map을 이용한 반복으로 코드를 수정
+                    // li 엘리먼트의 class명의 경우 선택된 tab 은 'submenu focused', 나머지 2개의 tab은 'submenu' 
+                    {/* <li className="submenu">{menuArr[0].name}</li>
+                    <li className="submenu">{menuArr[1].name}</li>
+                    <li className="submenu">{menuArr[2].name}</li> */}
+                    {menuArr.map((el,index) => (
+                        <li className={index === currentTab ? "submenu focused" : "submenu" }
+                        onClick={() => selectMenuHandler(index)}>{el.name}</li>
+                        ))}
+                    </TabMenu>
+                    <Desc>
+                    <p>{menuArr[currentTab].content}</p>
+                    </Desc>
+                    
+                </div>
+                </div>
+
+                <div className="job">
+                    <h3>채용공고</h3>
+                    <p>지원하고싶은 공고를 찾아보세요</p>
+                    <div className="job_list">
+                        <ul>
+                            <li><a href="#">
+                                <article><img src={job1} alt="" /></article>
+                                <p>재택근무</p>
+                            </a></li>
+                            <li><a href="#">
+                                <article><img src={job2} alt="" /></article>
+                                <p>인센티브</p>
+                            </a></li>
+                            <li><a href="#">
+                                <article><img src={job3} alt="" /></article>
+                                <p>유연근무제</p>
+                            </a></li>
+                            <li><a href="#">
+                                <article><img src={job4} alt="" /></article>
+                                <p>신입연봉 4천이상</p>
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <Chatbox isVisible={chatboxVisible} />
+            {chatboxVisible && (
+                <ChatboxContainer>
+                    <Chatbox />
+                </ChatboxContainer>
+            )}
+        </SearchResultContainer>
+    );
+};
+
+export default Main;

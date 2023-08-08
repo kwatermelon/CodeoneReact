@@ -1,0 +1,189 @@
+/* 상단 버튼 */
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.buttons-wrapper {
+    display: flex;
+    align-items: center;
+}
+/* 버튼 간격 띄울 때 사용하기 */
+.buttons-wrapper:not(:first-child) {
+    margin-left: 1230px;
+}
+
+
+/* 버튼 아래 부분 시작 */
+.tonetenets {
+    width: 100%;
+}
+.tonetenets .main_visual {
+    height: 260px;
+    /* background-image: url('/back1.jpg'); */
+    background-color: #d3e7f445;
+    width: 100%;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+.tonetenets .main_visual .total-search {
+    width: 1200px;
+    margin: 0 auto;
+    height: 200px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.tonetenets {
+    font-size: 16px; /* 원하는 폰트 크기로 조정 */
+}
+
+.tonetenets * {
+    font-size: inherit; /* 폰트 크기 상속 */
+}
+
+/* 검색, 필터링 부분----------------------  */
+.total-search {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.total-search > * {
+    margin: 5px 0;
+}
+
+.total-search > div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* 검색버튼을 오른쪽 끝으로 정렬 */
+}
+
+.total-search input[type="text"],
+.total-search select {
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.total-search input[type="text"] {
+    margin-right: 10px;
+}
+
+.total-search select {
+    margin-left: 10px;
+    background-position: right 8px center;
+    background-size: 10px 10px;
+}
+
+.total-search button {
+    width: 90px;
+    height: 35px;
+    background-color: #b6b4b4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 0px;
+}
+
+.jobfilter,
+.careerlocation,
+.job-skill,
+.slide {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+}
+
+.jobfilter label,
+.careerlocation label,
+.job-skill label,
+.slide label {
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.jobfilter select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+/* 검색, 필터링 부분 끝 ------------------------ */
+
+/* 채용중인 글만 보기 */
+.switch {
+    margin-left: 150px;
+}
+
+/* 이미지 카드 부분  */
+.tonetenets .card-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1200px;
+    margin: 0 auto;
+    gap: 10px;
+}
+.tonetenets .card-list .item {
+    width: calc(20% - 10px);
+    height: 280px;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid rgba(6, 6, 6, 0.079);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.tonetenets .card-list .item:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+}
+/* .tonetenets .card-list .item .img {background-color: #e3e3e3; height: 130px;} */
+.tonetenets .card-list .item .img img {
+    height: 140px;
+    border-radius: 10px;
+}
+
+/* 카드 comname글씨 굵게 */
+.job-txt {
+    font-weight: normal; /* 기본 글자 굵기 */
+}
+
+.job-txt strong {
+    font-weight: bold; /* comname 글자 굵기 */
+    display: inline-block;
+}
+
+.job-comname {
+    display: inline-block;
+}
+
+.job-like {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px; /* 원하는 만큼의 간격을 설정하세요 */
+}
+/* .job-likecount {
+} */
+
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.no-result {
+    text-align: center;
+    margin: auto;
+    width: fit-content;
+}

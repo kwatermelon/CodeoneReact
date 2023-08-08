@@ -1,0 +1,152 @@
+@charset "UTF-8";
+/* .chatbox-container * {
+    margin: 0;
+    padding: 0;
+} */
+
+/* input 위치조정 */
+.myform {
+    padding-left: 25px;
+    padding-right: 25px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* 투명도 : https://hype4.academy/tools/glassmorphism-generator */
+
+.chat-wrapper {
+    margin: 0 auto;
+    padding-bottom: 25px;
+    width: 330px;
+    height: 500px;
+    max-width: 100%;
+    background: #976d89;
+    border: 2px solid #212121;
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    position: fixed;
+    right: 20px;
+    bottom: 80px;
+    border-radius: 60px;
+    border: 2px solid rgba(0, 42, 255, 0.058);
+}
+
+/* 챗봇 박스 */
+.chatbox {
+    /* text-align: left; */
+    margin: 0 auto;
+    margin-bottom: 10px; /* 적절한 간격으로 조정해보세요 */
+    padding: 10px;
+    height: 350px;
+    width: 300px;
+    overflow: auto;
+    /* background: #fff; */
+    /* border: 1px solid #989898; */
+    /* border-radius: 4px;     */
+
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* input창 */
+.usermsgwrite {
+    flex: 1;
+    border-radius: 4px;
+    /* border: 1px solid #ff9800; */
+    border: 1px solid #989898;
+    background-color: #fff;
+    width: 150px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.submitmsg,
+.enter {
+    background: #373737;
+    /* border: 1px solid #000; */
+    color: white;
+    padding: 2px 8px; /* 패딩 값을 조정하여 크기를 작게 만듭니다 */
+    border-radius: 4px;
+    font-size: 12px; /* 폰트 크기를 조정하여 작게 만듭니다 */
+}
+
+/* 상단 글씨 */
+.chat-up {
+    padding: 10px 30px;
+    display: flex;
+    color: #2f64e7;
+}
+
+.chat-up p.welcome {
+    flex: 1;
+}
+
+/* 채팅메세지 */
+.usermsg,
+.botmsg {
+    display: inline-block;
+    background-color: #fbf8f80e;
+    color: rgba(1, 3, 28, 0.856);
+    font-size: small;
+    border-radius: 20px;
+    padding: 8px;
+    text-align: left;
+    max-width: 70%;
+    margin-bottom: 2px;
+    border: 1px dashed rgba(19, 73, 221, 0.726);
+}
+
+.usermsg {
+    background-color: white;
+    color: rgb(35, 32, 32);
+}
+/* Chatbox.css */
+
+/* send버튼 */
+.chatbot-button {
+    display: inline-block;
+    background-color: #1756eadf;
+    color: rgb(255, 255, 255);
+    font-size: small;
+    border-radius: 20px;
+    padding: 8px;
+    text-align: left;
+    max-width: 70%;
+    margin-bottom: 2px;
+    border: 1px dashed rgb(12, 12, 12);
+}
+.chatbot-button:hover {
+    background-color: #1b78f29c; /* 호버 상태 배경색 */
+}
+
+.bot-title {
+    display: inline-block;
+    background-color: #002fffcb;
+    color: rgb(255, 255, 255);
+    font-size: small;
+    border-radius: 20px;
+    padding: 8px;
+    text-align: left;
+    max-width: 70%;
+    margin-bottom: 2px;
+    border: 1px rgba(241, 241, 245, 0);
+    margin-left: 2px;
+}
+
+.bot-image {
+    border: 1px solid rgba(0, 0, 255, 0.199);
+    border-radius: 20px;
+}

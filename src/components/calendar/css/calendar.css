@@ -1,0 +1,415 @@
+
+.calendarWrap a {
+    color: #333 !important;
+    text-decoration: none !important;
+}
+.fc-event-title, .fc-event-time{
+    padding-left: 3px !important;
+}
+
+/* 일요일 날짜: 빨간색 */
+.calendarWrap{
+    font-size: 17px;
+    width: 1500px;
+    height:1200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.fc-view-harness{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.fc-media-screen {
+    width: 1500px;
+    margin-top: 50px;
+    height: 900px;
+}
+.iNvNqm h2 {
+    padding-bottom: 10px !important;
+}
+.fc-toolbar-title {
+    padding-right: 80px;
+    font-size: 30px !important;
+}
+
+/* 일요일 날짜:빨간색 */
+.fc-day-sun a {
+    color: red !important;
+}
+
+/* 토요일 날짜: 파란색 */
+.fc-day-sat a {
+    color: blue !important;
+}
+
+.fc-event {
+    color: #333 !important;
+}
+
+/* 모달창 설정 */
+.ReactModalPortal {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+}
+.ReactModal__Content {
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    background: #fff;
+    position: absolute;
+    margin-top: 200px;
+    border-radius: 30px !important;
+    border: 1px solid rgba(78, 108, 244, 0.35)  !important;
+    box-shadow: rgba(122, 122, 122, 0.35) 0px 5px 15px;
+}
+
+.fc-scrollgrid-section-body{
+    height: 960px !important; 
+}
+
+.fc-daygrid-body td{
+    height: 160px;
+}
+/* 색상설정 */
+.color {
+    display: flex;
+}
+.color input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 30px;
+    height: 30px;
+    display: block;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 5px;
+}
+.color input[type="radio"].color1 {
+    background-color: #ff5c55;
+}
+.color input[type="radio"].color2 {
+    background-color: #71abf8;
+}
+.color input[type="radio"].color3 {
+    background-color: #05c545;
+}
+.color input[type="radio"].color4 {
+    background-color: #ffd400;
+}
+.color input[type="radio"].color5 {
+    background-color: #caa3ef;
+}
+.color input[type="radio"].color6 {
+    background-color: #feb9c8;
+}
+.color input[type="radio"]:checked {
+    border: 3px solid #424242;
+}
+
+
+/* 이벤트가 길 경우 말줄임표 */
+.fc-daygrid-dot-event .fc-event-title{
+    flex-grow: 0;
+}
+.fc-event-title{
+    width: 195px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+    word-wrap: break-word;
+    display: inline-block;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.calendarWrap a.fc-event{
+    color: #333 !important;
+}
+/* 상단 버튼 */
+.fc-prevYear-button{
+    border-radius: 30px 0 0 30px !important;
+    background: rgb(248, 247, 244) !important;
+    border: 2px solid #4f6df4 !important;
+    border-right: none !important;
+    opacity: 0.65;
+    color: #4f6df4 !important;
+}
+.fc-prevYear-button:hover{
+    border-radius: 30px 0 0 30px !important;
+    background: #4f6df4 !important;
+    border: 2px solid #4f6df4 !important;
+    border-right: none !important;
+    transition: all linear 0.2s;
+    opacity: 0.65;
+}
+.fc-prevYear-button > .fc-icon{
+    color: #4f6df4;
+    opacity: 0.85;
+}
+.fc-prevYear-button:hover > .fc-icon{
+    color: rgb(248, 247, 244) !important;
+    opacity: 0.85;
+}
+.fc-prev-button{
+    background: rgb(248, 247, 244) !important;
+    border: 2px solid #4f6df4 !important;
+    border-right: none !important;
+    opacity: 0.65;
+}
+.fc-prev-button:hover{
+    background: #4f6df4 !important;
+    border: 2px solid #4f6df4 !important;
+    border-right: none !important;
+    transition: all linear 0.2s;
+    opacity: 0.65;
+}
+.fc-prev-button > .fc-icon{
+    color: #4f6df4;
+    opacity: 0.85;
+}
+.fc-prev-button:hover > .fc-icon{
+    color: rgb(248, 247, 244) !important;
+    opacity: 0.85;
+}
+.fc-next-button{
+    background: rgb(248, 247, 244) !important;
+    border: 2px solid #4f6df4 !important;
+    border-right: none !important;
+    opacity: 0.65;
+}
+.fc-next-button:hover {
+    background: #4f6df4 !important;
+    border: 2px solid #4f6df4 !important;
+    border-right: none !important;
+    transition: all linear 0.2s;
+    opacity: 0.65;
+}
+.fc-next-button > .fc-icon{
+    color: #4f6df4;
+    opacity: 0.85;
+}
+.fc-next-button:hover > .fc-icon{
+    color: rgb(248, 247, 244) !important;
+    opacity: 0.85;
+}
+.fc-nextYear-button{
+    border-radius: 0 30px 30px 0 !important;
+    background: rgb(248, 247, 244) !important;
+    border: 2px solid #4f6df4 !important;
+    opacity: 0.65;
+}
+.fc-nextYear-button:hover{
+    background: #4f6df4 !important;
+    border: 2px solid #4f6df4 !important;
+    transition: all linear 0.2s;
+    opacity: 0.65;
+}
+.fc-nextYear-button > .fc-icon{
+    color: #4f6df4;
+    opacity: 0.85;
+}
+.fc-nextYear-button:hover > .fc-icon{
+    color: rgb(248, 247, 244) !important;
+    opacity: 0.85;
+}
+.fc-today-button{
+    background: rgb(248, 247, 244) !important;
+    border-radius: 20px !important;
+    padding: .4em .85em !important;
+    border: 2px solid #4f6df4 !important;
+    color: #4f6df4 !important;
+    opacity: 0.85 !important;
+    transition: all linear 0.2s;
+}
+.fc-today-button:hover{
+    background: #4f6df4 !important;
+    color: rgb(248, 247, 244) !important;
+    border: 2px solid #4f6df4 !important;
+}
+/* right */
+.fc-dayGridMonth-button{
+    border-radius: 30px 0 0 30px !important;
+    background: rgb(248, 247, 244) !important;
+    border: 2px solid #4f6df4 !important;
+    border-right: none !important;
+    opacity: 0.85;
+    color: #4f6df4 !important;
+}
+.fc-dayGridMonth-button:hover{
+    border-radius: 30px 0 0 30px !important;
+    background: #4f6df4 !important;
+    border: 2px solid #4f6df4 !important;
+    border-right: none !important;
+    transition: all linear 0.2s;
+    opacity: 0.65;
+    color: rgb(248, 247, 244) !important;
+}
+.fc-dayGridWeek-button{
+    background: rgb(248, 247, 244) !important;
+    border: 2px solid #4f6df4 !important;
+    border-right: none !important;
+    opacity: 0.85;
+    color: #4f6df4 !important;
+}
+.fc-dayGridWeek-button:hover{
+    background: #4f6df4 !important;
+    border: 2px solid #4f6df4 !important;
+    border-right: none !important;
+    transition: all linear 0.2s;
+    opacity: 0.85;
+    color: rgb(248, 247, 244) !important;
+}
+.fc-listMonth-button{
+    border-radius: 0 30px 30px 0 !important;
+    background: rgb(248, 247, 244) !important;
+    border: 2px solid #4f6df4 !important;
+    opacity: 0.85;
+    color: #4f6df4 !important;
+    padding: 0.4em 1.5em !important;
+}
+.fc-listMonth-button:hover{
+    background: #4f6df4 !important;
+    border: 2px solid #4f6df4 !important;
+    transition: all linear 0.2s;
+    opacity: 0.85;
+    color: rgb(248, 247, 244) !important;
+}
+
+
+/* 일정보기 */
+.viewModal{
+    height: 95%;
+    padding: 0 20px;
+    position: relative;
+}
+.viewModal h2{
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.viewModal .date,.viewModal .time,.viewModal .content{
+    font-size: 17px;
+    margin-bottom: 10px;
+    background: #ecf2f6;
+    padding: 5px 7px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.viewModal .btnWrap{
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    left: calc(50% - 100px);
+}
+.viewModal .btnWrap .update, .viewModal .btnWrap .delete,.viewModal .btnWrap .cancel {
+    padding: 5px 13px;
+    border-radius: 10px;
+}
+.viewModal .btnWrap .update{
+    background: #469efd;
+    color: #fff;
+}
+.viewModal .btnWrap .delete{
+    background: #fd4646;
+    color: #fff;
+}
+.viewModal .btnWrap .cancel{
+    background: #6e6e6e;
+    color: #fff;
+}
+
+/* 일정작성 */
+.writeModal{
+    height: 95%;
+    padding: 0 20px;
+    position: relative;
+}
+.writeModal h2{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.writeModal form{
+    margin: 20px 0;
+}
+.writeModal form span{
+    padding: 0 5px;
+    font-size: 18px;
+}
+.writeModal form label{
+    font-size: 16px;
+    padding-right: 5px;
+}
+.writeModal form .date, .writeModal form .time{
+    margin-bottom: 20px;
+}
+.writeModal form .time .startTime, .writeModal form .time .endTime, .writeModal form .date .startDate, .writeModal form .date .endDate{
+    border: 0;
+    border-bottom: 1px solid #afaeae;
+}
+.writeModal form .time .allDay{
+    width: 14px;
+    height: 14px;
+}
+.writeModal .btnWrap{
+    margin-bottom: 50px ;
+}
+.writeModal .colorWrap{
+    width: 530px;
+    display: flex;
+}
+.writeModal .titleWrap .title{
+    width: 335px;
+    height: 30px;
+    border: 0;
+    border-bottom: 1px solid #afaeae;
+}
+.writeModal .titleWrap .title.title:focus, .writeModal .contentWrap .content:focus,.writeModal form .time .startTime:focus, .writeModal form .time .endTime:focus, .writeModal form .date .startDate:focus, .writeModal form .date .endDate:focus{
+    border-bottom: 1.5px solid rgba(79, 109, 244, 0.9);
+}
+.writeModal .titleWrap label{
+    vertical-align: top;
+}
+.writeModal .contentWrap{
+    margin: 10px 0;
+    height: 40px;
+
+}
+.writeModal .contentWrap label{
+    vertical-align: top;
+}
+.writeModal .contentWrap .content{ 
+    border: 1px solid black;
+    width: 335px;
+    height: 40px;
+    border: 0;
+    border-bottom: 1px solid #afaeae;
+}
+.writeModal .colorWrap .control-label{
+    line-height: bottom;
+}
+.writeModal .colorWrap .color{
+    margin-left: 10px;
+}
+.writeModal .btnWrap{
+    width: 150px;
+    margin: 0 auto;
+}
+.writeModal .btnWrap .write, .writeModal .btnWrap .cancel{
+    border-radius: 10px;
+    padding: 5px 13px;
+    margin: 0 5px;
+}
+.writeModal .btnWrap .write{
+    background: #469efd;
+    color: #fff;
+}
+.writeModal .btnWrap .cancel{
+    background: #fd4646;
+    color: #fff;
+}

@@ -1,0 +1,173 @@
+#job-info-table {
+    max-width: 100%;
+    border-collapse: collapse;
+    border: 1px solid rgb(217, 217, 217);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#job-info-table button {
+    border: 2px;
+}
+/* 테이블 안의 글씨크기 모두 통일 */
+#job-info-table th,
+#job-info-table td {
+    font-size: 16px;
+}
+
+#job-info-table th,
+#job-info-table td {
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid rgb(217, 217, 217);
+    border-radius: 5px;
+}
+
+#job-info-table th {
+    width: 120px;
+    background-color: rgb(245, 245, 245);
+    font-weight: normal;
+}
+
+#job-info-table input[type="text"],
+#job-info-table input[type="date"],
+#job-info-table select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(217, 217, 217);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#job-info-table td.job-loca input[type="text"] {
+    width: 100%;
+}
+
+#job-info-table .findmap {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+#job-info-table a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#job-info-table a:hover {
+    text-decoration: underline;
+}
+
+#job-info-table input[type="submit"] {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+#job-info-table input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: #0069d9;
+}
+
+#job-info-table th:first-child {
+    width: 120px;
+}
+
+#job-info-table th:first-child,
+#job-info-table td:first-child {
+    border-right: none;
+}
+
+#job-info-table tr:last-child td {
+    border-bottom: none;
+}
+
+#job-info-table tr:first-child th {
+    border-top: none;
+}
+
+#job-info-table tr:first-child th:first-child {
+    border-top-left-radius: 3px;
+}
+
+#job-info-table tr:first-child th:last-child {
+    border-top-right-radius: 3px;
+}
+
+/* 폼테두리 */
+#all-form {
+    width: 1000px;
+    margin: 0 auto;
+    border: 1px solid rgb(217, 217, 217);
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+#all-form h3 {
+    color: rgb(90, 88, 88);
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#all-form .btn-primary {
+    display: block;
+    margin: 0 auto;
+}
+
+#all-form .btn-primary:hover {
+    cursor: pointer;
+    background-color: #0069d9;
+}
+
+/* 폼 가로길이 조정 */
+#all-form table,
+#all-form button {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+#all-form table th,
+#all-form table td {
+    border: 1px solid rgb(217, 217);
+}
+/* 
+.upload-file-input {
+    width: 100px;
+    height: 30px;
+    font-size: 14px;
+} */
+
+#job-info-table .job-loca button,
+#job-info-table .job-thumb input[type="submit"],
+#job-info-table .job-fileup input[type="submit"] {
+    padding: 6px 10px;
+    font-size: 14px;
+    background-color: #1010103c;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#job-info-table .job-loca button:hover,
+#job-info-table .job-thumb input[type="submit"]:hover,
+#job-info-table .job-fileup input[type="submit"]:hover {
+    background-color: #191a1baf;
+}
+
+.date-range-inputs {
+    display: flex;
+    align-items: center;
+}
+
+.date-range-separator {
+    margin: 0 10px;
+    font-weight: bold;
+}

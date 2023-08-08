@@ -1,0 +1,227 @@
+/* 두 테이블의 배치 조정 */
+.job-detail {
+    flex-grow: 7;
+    width: 900px;
+    margin-right: 270px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding-bottom: 10px;
+}
+
+
+.job-nav {
+    flex-grow: 3;
+    width: 250px;
+    position: fixed;
+    top: 205px;
+    right: 180px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.job-msg,
+.job-link {
+    display: inline-block;
+    vertical-align: middle;
+}
+.job-msg {
+    margin-left: 60px;
+}
+
+.job-link {
+    margin-left: 10px;
+}
+
+.job-link img {
+    width: 25px;
+}
+
+/* 콘텐츠 안의 모든 p태그 크기 설정 */
+.job-detail p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #121212d5;
+}
+
+.job-detail h2 {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+/* 개별 글씨체 조정 */
+/* 회사이름 */
+#jobname {
+    font-size: 2rem; /* 원하는 글씨 크기로 설정 */
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.582);
+}
+/* 직무이름 */
+#comjobname {
+    font-size: 1rem;
+    color: #1631cad6;
+    font-weight: bold;
+}
+#startdead {
+    font-size: 1rem;
+    color: #063e03fc;
+}
+
+/* 태그 */
+
+.job-detail span {
+    font-size: 1rem;
+    color: #121212d5;
+}
+
+.job-tag span {
+    font-size: 1rem;
+    color: #ca1616;
+}
+
+/* 회색선 추가 */
+.content-container {
+    position: relative; /* 위치 지정 */
+}
+.content-line {
+    position: absolute; /* 절대 위치 */
+    top: 0; /* 상단 위치 */
+    left: 0; /* 좌측 위치 */
+    width: 100%; /* 가로폭 100% */
+    height: 1px; /* 높이 1px */
+    background-color: #ddd; /* 회색선 색상 */
+}
+
+.location-container {
+    position: relative; /* 위치 지정 */
+}
+
+.location-line {
+    position: absolute; /* 절대 위치 */
+    top: 0; /* 상단 위치 */
+    left: 0; /* 좌측 위치 */
+    width: 100%; /* 가로폭 100% */
+    height: 1px; /* 높이 1px */
+    background-color: #ddd; /* 회색선 색상 */
+}
+
+.download-container {
+    position: relative; /* 위치 지정 */
+}
+
+.download-line {
+    position: absolute; /* 절대 위치 */
+    top: 0; /* 상단 위치 */
+    left: 0; /* 좌측 위치 */
+    width: 100%; /* 가로폭 100% */
+    height: 1px; /* 높이 1px */
+    background-color: #ddd; /* 회색선 색상 */
+}
+.jobQNA {
+    position: relative; /* 위치 지정 */
+}
+
+.qna-line {
+    position: absolute; /* 절대 위치 */
+    top: 0; /* 상단 위치 */
+    left: 0; /* 좌측 위치 */
+    width: 100%; /* 가로폭 100% */
+    height: 1px; /* 높이 1px */
+    background-color: #ddd; /* 회색선 색상 */
+}
+
+/* nav-bar 내부 조정 */
+
+/* 회사이름, 전형 */
+#jobnav {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+/* 그 외의 글씨 */
+.job-nav p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.job-nav button {
+    display: block;
+    height: 80% !important;
+    width: 100%;
+    padding: 5px;
+    background-color: #0078ff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem !important;
+}
+
+.job-nav button:hover {
+    background-color: #005cb2;
+}
+.job-msg {
+    margin-top: 20px;
+}
+
+.job-nav button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #0078ff;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+.job-nav button:hover {
+    background-color: #005cb2;
+}
+
+/* 지도 조정 */
+.location-container {
+    border-radius: 10px;
+}
+
+/* 아이콘 크기 조정 */
+.job-company {
+    width: 37px;
+    height: 37px;
+    vertical-align: middle;
+}
+
+.job-start {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.job-down {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+.job-qna {
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+}
+
+.job-up {
+    position: fixed;
+    bottom: 20px;
+    right: 120px;
+    z-index: 9999;
+}
+
+.job-upup {
+    width: 40px;
+    height: 40px;
+}

@@ -1,0 +1,23 @@
+/* 외부 버튼 */
+/* .buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.buttons-wrapper {
+    display: flex;
+    align-items: center;
+}
+버튼 간격 띄울 때 사용하기
+.buttons-wrapper:not(:first-child) {
+    margin-left: 1200px;
+}
+*/
+.cal-container {
+    width: 1500px;
+    height: 1200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}

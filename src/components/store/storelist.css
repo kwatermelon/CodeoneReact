@@ -1,0 +1,202 @@
+.store {
+    width: 100%;
+    /* margin: 0 auto; */
+    
+}
+
+.store-list {
+    display: grid;
+    grid-template-columns: repeat(5, 250px); /* 한 줄에 5개의 컬럼을 생성합니다. */
+    grid-gap: 50px; /* 사진 간의 간격을 설정합니다. */
+    width: 1760px; /* .store-list 요소의 너비를 조정합니다.     */
+    margin: 0 auto; /* 가운데 정렬을 적용합니다. */  
+    justify-content: center; /* 그리드 컨테이너를 수평 중앙에 위치시킵니다. */  
+    
+  }
+    /* 글리스트 반응형*/
+  .store-list-change{
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+     /*  비율로 그리드 컬럼 크기를 조정합니다. 
+    반응형:auto, 인터넷페이지설정5개만할때는 5개로 설정 */
+
+    grid-template-columns: repeat(5, 250px); /* 한 줄에 5개의 그리드 컬럼을 고정 크기로 설정합니다. */
+    grid-gap: 50px; /* 비율로 그리드 간격을 조정합니다. */
+    width: 80%; /* 너비를 100%로 설정합니다. */
+    justify-content: center; /* 그리드 컨테이너를 수평 중앙에 위치시킵니다. */
+    margin: 0 auto; /* 가운데 정렬 스타일을 삭제합니다. */
+  }
+
+.store-list-title{
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.store-sell-btn{
+    border-radius: 50px !important;
+    width: 80px;
+    height: 30px;
+    font-size: 15px;
+    /* background-color: #4f6df4; */
+    background-color: blueviolet;
+    color: white;
+}
+
+.store-sold-btn{
+    border-radius: 50px !important;
+    width: 80px;
+    height: 30px;
+    font-size: 15px;
+    background-color: gray;
+    color: white;
+}
+  
+.store-item {
+    /* 카드의 크기를 조절합니다. */
+    width: 100%;
+    /* height: 400px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 20px; */
+    
+}
+
+.store-item-img {
+    width: 100%;
+    height: 160px;          /* 추후 이미지 길이 조정 */
+    
+}
+
+.search-store {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    /*flex-wrap: wrap;이 부분을 추가해주세요.*/
+
+  
+}
+.search-select{
+    width: 150px;
+}
+
+.search-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  /* Optional styling for the input element */
+  .search-bar input {
+    width: 300px;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .search-category{
+    width: 80%;
+    height: 150px;
+    background-color: #ccc;
+    margin: auto;
+    border-radius: 10px;
+    margin-bottom: 50px;
+  }
+
+  search-category table {
+    border: 1px solid black;
+  }
+
+.store-write{
+    text-align: right;
+    margin-right: 70px;
+}
+
+.store-text{
+    font-size: 18px;
+    width: 100%;   
+    display: inline-block;
+}
+
+.store-price-text{
+    display: inline-block;
+    text-align: left;
+    font-size: 20px;  
+    font-weight: 600;  
+    
+}
+
+.store-date-text{    
+    /* display: inline-block; */
+    float: right;
+    text-align: right !important;    
+    color: slategray;
+    
+}
+
+.right-position{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;  
+}
+
+.inline-block {
+    display: inline-block;
+    /* text-align: left; */
+    /* vertical-align: middle; */
+  }
+
+.float{
+    display: inline-block;
+    text-align: right !important;    
+}
+
+.store-card-line{
+    display: flex;
+    justify-content: space-between;
+}
+
+.write-btn{
+    background-color: mediumorchid !important;
+    border-radius: 25px;
+    margin: 5px;
+    color: white;
+    padding: 5px 20px 5px 20px;
+    font-size: 20px;
+}
+
+.store input[type="text"]{
+  margin-left: 5px;
+  width: 300px ;
+}
+
+.search-store button{
+  width: 100px;
+  margin-left: 5px;
+}
+
+.search-btn{
+  background-color: #4f6df4;
+  color: white;
+}
+
+.orderby select{
+  width: 100px;
+}
+
+/* .input {
+    all: unset;
+    font: 16px system-ui;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    padding: 6px 10px;
+  }
+
+  .active-purple .fa, .active-purple-2 .fa {
+    color: #ce93d8;
+  } */

@@ -1,0 +1,56 @@
+.lectureregi-page{
+    width: 100%;    
+    padding: 50px;
+}
+
+.lectureregi-form{
+    width: 40%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px
+}
+
+.lectureregi-form img{
+    width: 100%;
+    
+}
+
+.lectureregi-form h2{
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.lectureregi-form div{
+    text-align: center;
+}
+
+.lectureregi-form h3{
+    font-size: 25px;
+    color: grey;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.regi-price p{
+    font-size: 20px;
+    text-align: right;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.regi-agree{
+    font-size: 20px;
+    text-align: right !important;
+    margin-bottom: 20px;
+}
+
+.lectureregi-form h4{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 22px;
+    color: gray;
+}
